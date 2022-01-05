@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SideMenu from './SideMenu';
 
 const Navbar = () => {
   const [isSideMenuOpen, setisSideMenuOpen] = useState(false);
+  const [title, setTitle] = useState('Home');
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
   return (
     <div className="bg-white fixed md:relative shadow-sm  w-full z-20 overflow-hidden">
       <div className="container mx-auto  ">
         <nav className="flex justify-items-start justify-between items-center h-16">
-          <Link to="/" className="text-3xl font-extrabold cursor-pointer">
+          <Link
+            to="/"
+            onClick={() => setTitle('Home')}
+            className="text-3xl font-extrabold cursor-pointer"
+          >
             <sapn className="text-green-500">A</sapn>
             <sapn className="text-red-500">R</sapn>
             <sapn className="text-black-500">R</sapn>
@@ -18,6 +28,7 @@ const Navbar = () => {
               <li className="">
                 <Link
                   to="/"
+                  onClick={() => setTitle('Home')}
                   className="px-8 py-2 transition-all delay-150 hover:text-yellow-500 "
                 >
                   Home
@@ -27,6 +38,7 @@ const Navbar = () => {
                 <Link
                   className="px-8 py-2 transition-all hover:text-yellow-500 delay-150"
                   to="/about"
+                  onClick={() => setTitle('About')}
                 >
                   About
                 </Link>
@@ -35,6 +47,7 @@ const Navbar = () => {
                 <Link
                   className="px-8 py-2 transition-all hover:text-yellow-500 delay-150"
                   to="/service"
+                  onClick={() => setTitle('Service')}
                 >
                   Services
                 </Link>
@@ -43,6 +56,7 @@ const Navbar = () => {
                 <Link
                   className="px-8 py-2 transition-all hover:text-yellow-500 delay-150 "
                   to="/portfolio"
+                  onClick={() => setTitle('Portfolio')}
                 >
                   Portfolio
                 </Link>
@@ -51,6 +65,7 @@ const Navbar = () => {
                 <Link
                   className="px-8 py-2 transition-all hover:text-yellow-500 delay-150 "
                   to="/contact"
+                  onClick={() => setTitle('Contact')}
                 >
                   Contact
                 </Link>
@@ -69,7 +84,7 @@ const Navbar = () => {
           </button>
         </nav>
       </div>
-      {isSideMenuOpen ? <SideMenu /> : ''}
+      {isSideMenuOpen ? <SideMenu setisSideMenuOpen={setisSideMenuOpen} /> : ''}
     </div>
   );
 };

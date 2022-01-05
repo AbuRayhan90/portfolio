@@ -7,7 +7,7 @@ import Review3 from '../assets/img/review3.jpg';
 const CarouselSlider = () => {
   return (
     <div className="text-center text-white mt-10">
-      <Carousel>
+      <Carousel interval={1000}>
         <Carousel.Item>
           <div className="">
             <div>
