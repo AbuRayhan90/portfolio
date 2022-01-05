@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg_color {
+  background-color: #24263b;
+}
+.text_color {
+  color: #ff5823;
+}
+.btn_bg {
+  background-color: #ff5823;
+}
+.carousel-indicators {
+  display: none;
+}
