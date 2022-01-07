@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import SideMenu from './SideMenu';
 
 const Navbar = () => {
   const [isSideMenuOpen, setisSideMenuOpen] = useState(false);
@@ -11,80 +10,79 @@ const Navbar = () => {
   }, [title]);
 
   return (
-    <div className="bg-white fixed md:relative shadow-sm  w-full z-20 overflow-hidden">
-      <div className="container mx-auto  ">
-        <nav className="flex justify-items-start justify-between items-center h-16">
-          <Link
-            to="/"
-            onClick={() => setTitle('Home')}
-            className="text-3xl font-extrabold cursor-pointer"
+    <div className="fixed w-full flex justify-between items-center px-4 md:px-12 z-30 bg-white h-[4.5rem] pt-3 overflow-hidden">
+      {/* <div className="container mx-auto  "> */}
+      <Link
+        to="/"
+        onClick={() => setTitle('Home')}
+        className="text-3xl font-extrabold cursor-pointer "
+      >
+        <sapn className="text-green-500">A</sapn>
+        <sapn className="text-red-500">R</sapn>
+        <sapn className="text-black">R</sapn>
+      </Link>
+      <nav className="">
+        <button
+          className="md:hidden"
+          onClick={() => setisSideMenuOpen(!isSideMenuOpen)}
+        >
+          {isSideMenuOpen ? (
+            <i className="fas fa-times text-3xl"></i>
+          ) : (
+            <i className="fas fa-bars text-3xl"></i>
+          )}
+        </button>
+        <ul
+          className={`fixed left-0 right-0 min-h-screen bg-white transition duration-200 text-black  pt-4 transform ${
+            isSideMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          } md:relative md:flex md:min-h-0 md:space-y-0 md:space-x-6  md:translate-x-0 `}
+        >
+          <li
+            onClick={() => setisSideMenuOpen(false)}
+            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white"
           >
-            <sapn className="text-green-500">A</sapn>
-            <sapn className="text-red-500">R</sapn>
-            <sapn className="text-black">R</sapn>
-          </Link>
-          <div className="">
-            <ul className="hidden lg:flex  text-md font-light items-center ">
-              <li className="">
-                <Link
-                  to="/"
-                  onClick={() => setTitle('Home')}
-                  className="px-8 py-2 transition-all delay-150 hover:text-yellow-500 "
-                >
-                  Home
-                </Link>
-              </li>
-              <li className=" ">
-                <Link
-                  className="px-8 py-2 transition-all hover:text-yellow-500 delay-150"
-                  to="/about"
-                  onClick={() => setTitle('About')}
-                >
-                  About
-                </Link>
-              </li>
-              <li className="">
-                <Link
-                  className="px-8 py-2 transition-all hover:text-yellow-500 delay-150"
-                  to="/service"
-                  onClick={() => setTitle('Service')}
-                >
-                  Services
-                </Link>
-              </li>
-              <li className="">
-                <Link
-                  className="px-8 py-2 transition-all hover:text-yellow-500 delay-150 "
-                  to="/portfolio"
-                  onClick={() => setTitle('Portfolio')}
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li className="">
-                <Link
-                  className="px-8 py-2 transition-all hover:text-yellow-500 delay-150 "
-                  to="/contact"
-                  onClick={() => setTitle('Contact')}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <button
-            onClick={() => setisSideMenuOpen(!isSideMenuOpen)}
-            className=" border-2 px-2 w-10 md:hidden"
+            <Link to="/" className="px-8 py-2 block hover:text-white">
+              Home
+            </Link>
+          </li>
+          <li
+            onClick={() => setisSideMenuOpen(false)}
+            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white  "
           >
-            {!isSideMenuOpen ? (
-              <i className="fas fa-bars "></i>
-            ) : (
-              <i className="fas fa-times"></i>
-            )}
-          </button>
-        </nav>
-      </div>
-      {isSideMenuOpen ? <SideMenu setisSideMenuOpen={setisSideMenuOpen} /> : ''}
+            <Link
+              className="px-8 md:py-2 py-2 block hover:text-white"
+              to="/about"
+            >
+              About
+            </Link>
+          </li>
+          <li
+            onClick={() => setisSideMenuOpen(false)}
+            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
+          >
+            <Link className="px-8 py-2 block hover:text-white" to="/service">
+              Services
+            </Link>
+          </li>
+          <li
+            onClick={() => setisSideMenuOpen(false)}
+            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
+          >
+            <Link className="px-8 py-2 block hover:text-white" to="/portfolio">
+              Porfolio
+            </Link>
+          </li>
+          <li
+            onClick={() => setisSideMenuOpen(false)}
+            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
+          >
+            <Link className="px-8 py-2 block hover:text-white " to="/contact">
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      {/* </div> */}
     </div>
   );
 };

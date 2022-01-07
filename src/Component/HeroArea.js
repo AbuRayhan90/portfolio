@@ -5,13 +5,13 @@ import { Zoom } from 'react-reveal';
 
 const HeroArea = () => {
   return (
-    <div className="bg-hero-area  bg-cover bg-gray-900 bg-blend-overlay bg-center md:h-screen h-96 overflow-hidden ">
+    <div className="bg-hero-area  bg-cover bg-gray-700 bg-blend-overlay h-[35rem] bg-center md:h-screen overflow-hidden ">
       <div className="container mx-auto">
         <Zoom>
-          <div className="text-center text-white md:pt-56 pt-48">
-            <h1 className="md:text-6xl  text-4xl font-semibold ">
+          <div className="text-center text-white md:pt-56 pt-[15rem] ">
+            <h1 className="md:text-5xl  text-2xl font-semibold ">
               Hello, I'M <span className="text-yellow-600">Rayhan</span>
-              <span className="text-5xl   my-4">
+              <span className="md:text-6xl text-3xl font-light   my-4">
                 <Typical
                   steps={[
                     'Front-end Developer 🏚️',

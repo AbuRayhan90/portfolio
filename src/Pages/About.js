@@ -9,12 +9,16 @@ const About = () => {
   const [btnText2, setBtnText2] = useState('DOWNLOAD C.V');
   return (
     <>
-      <div className="container mx-auto pt-12 ">
+      <div className="container mx-auto pt-20 ">
         <HeadingDownLine text="About Me" anotherText="Why Choose Me ?" />
-        <div className="md:flex flex-wrap py-10">
+        <div className="flex flex-wrap py-10">
           <Fade bottom>
-            <div className="md:w-2/4 w-full">
-              <img className="h-96 pl-16 " src={OwnImage} alt="Personal" />
+            <div className="md:w-2/4 w-full mb-10 ">
+              <img
+                className="md:h-96 md:pl-16 "
+                src={OwnImage}
+                alt="Personal"
+              />
             </div>
           </Fade>
           <Fade right>

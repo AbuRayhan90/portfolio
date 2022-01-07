@@ -5,14 +5,14 @@ import TestimonialsContent from '../Component/TestimonialsContent';
 
 const Testimonials = () => {
   return (
-    <div className=" bg-testimonial-area bg-gray-800 bg-blend-overlay bg-cover bg-center h-screen py-10">
+    <div className=" bg-testimonial-area bg-gray-800 bg-blend-overlay bg-cover bg-center h-full md:h-screen py-10">
       <div className="container mx-auto">
         <HeadingDownLine
           text="Testimonials"
           textcolor="text-white text-semibold"
         />
         <CarouselSlider />
-        <div className="flex md:flex-wrap justify-between">
+        <div className="flex flex-wrap md:justify-between">
           <TestimonialsContent
             icon="far fa-laugh"
             number="15"

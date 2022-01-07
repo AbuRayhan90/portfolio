@@ -6,10 +6,10 @@ const PortfolioContent = ({ portfolio_img, title, liveSite }) => {
       <div className="">
         <img
           src={portfolio_img}
-          className="h-[30rem] w-[25rem]"
+          className="h-[20rem] w-full md:h-[30rem] md:w-[25rem] rounded-md"
           alt="portfolio"
         />
-        <h1 className="text-lg mt-6 font-semibold">
+        <h1 className="text-lg my-6 font-semibold">
           {title}{' '}
           <a
             href={liveSite}

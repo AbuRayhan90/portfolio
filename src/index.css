@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Roboto';
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 .bg_color {
   background-color: #24263b;
 }
