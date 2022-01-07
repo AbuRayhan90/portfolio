@@ -21,7 +21,7 @@ const Navbar = () => {
           >
             <sapn className="text-green-500">A</sapn>
             <sapn className="text-red-500">R</sapn>
-            <sapn className="text-black-500">R</sapn>
+            <sapn className="text-black">R</sapn>
           </Link>
           <div className="">
             <ul className="hidden lg:flex  text-md font-light items-center ">

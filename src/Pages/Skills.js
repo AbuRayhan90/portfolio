@@ -1,7 +1,7 @@
 import React from 'react';
 import HeadingDownLine from '../Component/HeadingDownLine';
 import Skill from '../Component/Skill';
-import allData from '../ultsData';
+import AllData from '../ultsData';
 import { Zoom } from 'react-reveal';
 
 const Skills = () => {
@@ -13,8 +13,8 @@ const Skills = () => {
             <HeadingDownLine text="My Skills" textcolor="text-white" />
           </div>
           <Zoom>
-            {allData.skills.map((item) => (
-              <Skill item={item} />
+            {AllData.skills.map((item) => (
+              <Skill item={item} key={item.id} />
             ))}
           </Zoom>
         </div>

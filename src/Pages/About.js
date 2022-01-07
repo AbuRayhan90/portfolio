@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import OwnImage from '../assets/img/arr.png';
-import allData from '../ultsData';
+import AllData from '../ultsData';
 import HeadingDownLine from '../Component/HeadingDownLine';
 import { Link } from 'react-router-dom';
 import { Fade, Zoom } from 'react-reveal';
@@ -31,7 +31,7 @@ const About = () => {
                 PHP, MySql 2. Any sketch, PSD, ai, photo, xd to HTML, Bootstrap,
               </p>
               <div className="md:mt-16 mt-8  ">
-                {allData.socialIcon.map((icon) => (
+                {AllData.socialIcon.map((icon) => (
                   <a
                     href={icon.link}
                     target="_blank"
