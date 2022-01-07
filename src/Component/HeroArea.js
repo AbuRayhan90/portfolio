@@ -8,10 +8,10 @@ const HeroArea = () => {
     <div className="bg-hero-area  bg-cover bg-gray-700 bg-blend-overlay h-[35rem] bg-center md:h-screen overflow-hidden ">
       <div className="container mx-auto">
         <Zoom>
-          <div className="text-center text-white md:pt-56 pt-[15rem] ">
+          <div className="text-center text-white pt-[15rem] md:pt-[20rem]  ">
             <h1 className="md:text-5xl  text-2xl font-semibold ">
               Hello, I'M <span className="text-yellow-600">Rayhan</span>
-              <span className="md:text-6xl text-3xl font-light   my-4">
+              <span className="md:text-6xl text-3xl font-light my-4">
                 <Typical
                   steps={[
                     'Front-end Developer 🏚️',

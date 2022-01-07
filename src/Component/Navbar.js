@@ -10,79 +10,82 @@ const Navbar = () => {
   }, [title]);
 
   return (
-    <div className="fixed w-full flex justify-between items-center px-4 md:px-12 z-30 bg-white h-[4.5rem] pt-3 overflow-hidden">
-      {/* <div className="container mx-auto  "> */}
-      <Link
-        to="/"
-        onClick={() => setTitle('Home')}
-        className="text-3xl font-extrabold cursor-pointer "
-      >
-        <sapn className="text-green-500">A</sapn>
-        <sapn className="text-red-500">R</sapn>
-        <sapn className="text-black">R</sapn>
-      </Link>
-      <nav className="">
-        <button
-          className="md:hidden"
-          onClick={() => setisSideMenuOpen(!isSideMenuOpen)}
+    <div className="fixed w-full  px-4 md:px-12 z-30 bg-white  py-[1rem]   overflow-hidden">
+      <div className="container mx-auto  flex justify-between items-center ">
+        <Link
+          to="/"
+          onClick={() => setTitle('Home')}
+          className="text-3xl font-extrabold cursor-pointer "
         >
-          {isSideMenuOpen ? (
-            <i className="fas fa-times text-3xl"></i>
-          ) : (
-            <i className="fas fa-bars text-3xl"></i>
-          )}
-        </button>
-        <ul
-          className={`fixed left-0 right-0 min-h-screen bg-white transition duration-200 text-black  pt-4 transform ${
-            isSideMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          } md:relative md:flex md:min-h-0 md:space-y-0 md:space-x-6  md:translate-x-0 `}
-        >
-          <li
-            onClick={() => setisSideMenuOpen(false)}
-            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white"
+          <sapn className="text-green-500">A</sapn>
+          <sapn className="text-red-500">R</sapn>
+          <sapn className="text-black">R</sapn>
+        </Link>
+        <nav className="">
+          <button
+            className="md:hidden"
+            onClick={() => setisSideMenuOpen(!isSideMenuOpen)}
           >
-            <Link to="/" className="px-8 py-2 block hover:text-white">
-              Home
-            </Link>
-          </li>
-          <li
-            onClick={() => setisSideMenuOpen(false)}
-            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white  "
+            {isSideMenuOpen ? (
+              <i className="fas fa-times text-3xl"></i>
+            ) : (
+              <i className="fas fa-bars text-3xl"></i>
+            )}
+          </button>
+          <ul
+            className={`fixed left-0 right-0 min-h-screen bg-white transition duration-200 text-black  pt-[.5rem] md:pt-[0rem] transform ${
+              isSideMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            } md:relative md:flex md:min-h-0 md:space-y-0 md:space-x-6  md:translate-x-0 `}
           >
-            <Link
-              className="px-8 md:py-2 py-2 block hover:text-white"
-              to="/about"
+            <li
+              onClick={() => setisSideMenuOpen(false)}
+              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white"
             >
-              About
-            </Link>
-          </li>
-          <li
-            onClick={() => setisSideMenuOpen(false)}
-            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
-          >
-            <Link className="px-8 py-2 block hover:text-white" to="/service">
-              Services
-            </Link>
-          </li>
-          <li
-            onClick={() => setisSideMenuOpen(false)}
-            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
-          >
-            <Link className="px-8 py-2 block hover:text-white" to="/portfolio">
-              Porfolio
-            </Link>
-          </li>
-          <li
-            onClick={() => setisSideMenuOpen(false)}
-            className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
-          >
-            <Link className="px-8 py-2 block hover:text-white " to="/contact">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      {/* </div> */}
+              <Link to="/" className="px-8 py-2 block hover:text-white">
+                Home
+              </Link>
+            </li>
+            <li
+              onClick={() => setisSideMenuOpen(false)}
+              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white  "
+            >
+              <Link
+                className="px-8 md:py-2 py-2 block hover:text-white"
+                to="/about"
+              >
+                About
+              </Link>
+            </li>
+            <li
+              onClick={() => setisSideMenuOpen(false)}
+              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
+            >
+              <Link className="px-8 py-2 block hover:text-white" to="/service">
+                Services
+              </Link>
+            </li>
+            <li
+              onClick={() => setisSideMenuOpen(false)}
+              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
+            >
+              <Link
+                className="px-8 py-2 block hover:text-white"
+                to="/portfolio"
+              >
+                Porfolio
+              </Link>
+            </li>
+            <li
+              onClick={() => setisSideMenuOpen(false)}
+              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
+            >
+              <Link className="px-8 py-2 block hover:text-white " to="/contact">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 };
