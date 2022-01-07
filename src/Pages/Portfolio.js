@@ -7,7 +7,7 @@ import Import_2 from '../assets/portfolio/ecommerce-app.png';
 const Portfolio = () => {
   return (
     <div className="pt-20">
-      <div className="container mx-auto md:my-16 ">
+      <div className="container mx-auto  ">
         <HeadingDownLine text="Portfolio" textcolor="font-semibold" />
         <div className="md:flex w-full justify-between md:flex-wrap md:mt-16 mt-8">
           <PortfolioContent

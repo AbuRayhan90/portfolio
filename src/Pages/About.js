@@ -3,7 +3,7 @@ import OwnImage from '../assets/img/arr.png';
 import AllData from '../ultsData';
 import HeadingDownLine from '../Component/HeadingDownLine';
 import { Link } from 'react-router-dom';
-import { Fade, Zoom } from 'react-reveal';
+import { Fade } from 'react-reveal';
 const About = () => {
   const [btnText, setBtnText] = useState('HIRE ME');
   const [btnText2, setBtnText2] = useState('DOWNLOAD C.V');

@@ -6,8 +6,8 @@ import { Zoom } from 'react-reveal';
 
 const Service = () => {
   return (
-    <div>
-      <div className="container mx-auto pt-20">
+    <>
+      <div className="container mx-auto pt-20 mb-6 md:mb-0 ">
         <HeadingDownLine text="My Services" textcolor="text-black" />
         <div className="flex w-full flex-wrap  md:justify-between mt-6 space-y-4">
           {AllData.services.map((item) => (
@@ -35,7 +35,7 @@ const Service = () => {
           <ButtonBlank text="View More" />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

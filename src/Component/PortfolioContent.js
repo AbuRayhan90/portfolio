@@ -15,6 +15,7 @@ const PortfolioContent = ({ portfolio_img, title, liveSite }) => {
             href={liveSite}
             className="text-yellow-600 font-bold"
             target="_blank"
+            rel="site"
           >
             View Live Demo
           </a>

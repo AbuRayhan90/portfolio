@@ -26,7 +26,7 @@ const Contact = () => {
   };
   return (
     <div className="bg-contact-area bg-gray-800 bg-blend-overlay bg-fixed  bg-cover bg-center md:h-screen pt-20">
-      <div className="container mx-auto py-4">
+      <div className="container mx-auto ">
         <HeadingDownLine text="Get in Touch" textcolor="text-white" />
         <form onSubmit={sendEmail} className="md:w-4/5 w-full  mx-auto mt-10">
           <div className="md:flex md:space-x-8 justify-between ">

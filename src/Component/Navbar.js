@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isSideMenuOpen, setisSideMenuOpen] = useState(false);
-  const [title, setTitle] = useState('Home');
+  const [title, setTitle] = useState('Abu Rayhan');
+  const location = useLocation();
+  const getColor = (currLocation) => {
+    return location.pathname === currLocation
+      ? 'text-yellow-600 hover:text-yellow-600'
+      : 'text-black';
+  };
 
   useEffect(() => {
     document.title = title;
   }, [title]);
 
   return (
-    <div className="fixed w-full  px-4 md:px-12 z-30 bg-white  py-[1rem]   overflow-hidden">
+    <div className="fixed w-full z-30 bg-white  py-[1rem]   overflow-hidden">
       <div className="container mx-auto  flex justify-between items-center ">
         <Link
           to="/"
@@ -37,49 +43,67 @@ const Navbar = () => {
               isSideMenuOpen ? 'translate-x-0' : 'translate-x-full'
             } md:relative md:flex md:min-h-0 md:space-y-0 md:space-x-6  md:translate-x-0 `}
           >
-            <li
-              onClick={() => setisSideMenuOpen(false)}
-              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white"
-            >
-              <Link to="/" className="px-8 py-2 block hover:text-white">
+            <li onClick={() => setisSideMenuOpen(false)}>
+              <Link
+                to="/"
+                onClick={() => setTitle('Home')}
+                className={`px-2 py-2 block  ${getColor('/')}`}
+              >
                 Home
               </Link>
             </li>
-            <li
-              onClick={() => setisSideMenuOpen(false)}
-              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white  "
-            >
+            <li onClick={() => setisSideMenuOpen(false)}>
               <Link
-                className="px-8 md:py-2 py-2 block hover:text-white"
                 to="/about"
+                onClick={() => setTitle('About')}
+                className={`px-2 py-2 block  ${getColor('/about')}`}
               >
                 About
               </Link>
             </li>
-            <li
-              onClick={() => setisSideMenuOpen(false)}
-              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
-            >
-              <Link className="px-8 py-2 block hover:text-white" to="/service">
-                Services
-              </Link>
-            </li>
-            <li
-              onClick={() => setisSideMenuOpen(false)}
-              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
-            >
+
+            <li onClick={() => setisSideMenuOpen(false)}>
               <Link
-                className="px-8 py-2 block hover:text-white"
                 to="/portfolio"
+                onClick={() => setTitle('Portfolio')}
+                className={`px-2 py-2 block  ${getColor('/portfolio')}`}
               >
                 Porfolio
               </Link>
             </li>
-            <li
-              onClick={() => setisSideMenuOpen(false)}
-              className="hover:bg-yellow-600 transition-all cursor-pointer hover:text-white "
-            >
-              <Link className="px-8 py-2 block hover:text-white " to="/contact">
+            <li onClick={() => setisSideMenuOpen(false)}>
+              <Link
+                to="/skills"
+                onClick={() => setTitle('Skills')}
+                className={`px-2 py-2 block  ${getColor('/skills')}`}
+              >
+                Skills
+              </Link>
+            </li>
+            <li onClick={() => setisSideMenuOpen(false)}>
+              <Link
+                to="/service"
+                onClick={() => setTitle('Services')}
+                className={`px-2 py-2 block  ${getColor('/service')}`}
+              >
+                Services
+              </Link>
+            </li>
+            <li onClick={() => setisSideMenuOpen(false)}>
+              <Link
+                to="/testimonial"
+                onClick={() => setTitle('Testimonial')}
+                className={`px-2 py-2 block  ${getColor('/testimonial')}`}
+              >
+                Testimonial
+              </Link>
+            </li>
+            <li onClick={() => setisSideMenuOpen(false)}>
+              <Link
+                to="/contact"
+                onClick={() => setTitle('Contact')}
+                className={`px-2 py-2 block  ${getColor('/contact')}`}
+              >
                 Contact
               </Link>
             </li>
