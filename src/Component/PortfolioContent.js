@@ -1,16 +1,26 @@
-import React from "react";
-
-const PortfolioContent = ({ bgImage }) => {
+import React from 'react';
+import { Zoom } from 'react-reveal';
+const PortfolioContent = ({ portfolio_img, title, liveSite }) => {
   return (
-    <div
-      className={`${bgImage} relative hover:bg-white bg-center bg-cover md:h-48 h-60 md:w-96 mt-6 cursor-pointer`}
-    >
-      <div className="hover:bg-gray-300 absolute h-full w-full text-transparent hover:text-red-500">
-        <h1 className="text-center text-3xl  my-16  underline">
-          Click to view project
+    <Zoom>
+      <div className="">
+        <img
+          src={portfolio_img}
+          className="h-[30rem] w-[25rem]"
+          alt="portfolio"
+        />
+        <h1 className="text-lg mt-6 font-semibold">
+          {title}{' '}
+          <a
+            href={liveSite}
+            className="text-yellow-600 font-bold"
+            target="_blank"
+          >
+            View Live Demo
+          </a>
         </h1>
       </div>
-    </div>
+    </Zoom>
   );
 };
 
