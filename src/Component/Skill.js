@@ -7,7 +7,7 @@ const Skill = ({ item }) => {
       <div className="flex h2">
         <div className="w-full bg-gray-900 h-2 rounded-full dark:bg-gray-700">
           <div
-            className="bg-gradient-to-r from-[#bcde45] to-[#fec800] h-2   text-blue-100 text-center  rounded-full"
+            className="bg-gradient-to-r from-[#D31A50] to-[#00BC40] h-2   text-blue-100 text-center  rounded-full"
             style={{ width: `${item.parsentage}` }}
           ></div>
         </div>

@@ -5,7 +5,7 @@ import TestimonialsContent from '../Component/TestimonialsContent';
 
 const Testimonials = () => {
   return (
-    <div className=" bg-testimonial-area bg-gray-800 bg-blend-overlay bg-cover bg-center h-full md:h-screen pb-10 pt-20">
+    <div className=" bg-testimonial-area bg-gray-900 bg-blend-overlay bg-cover bg-center h-full md:h-screen pb-10 pt-20">
       <div className="container mx-auto">
         <HeadingDownLine
           text="Testimonials"

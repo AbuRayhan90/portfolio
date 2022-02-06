@@ -1,0 +1,52 @@
+.heading_border {
+  border-bottom: 2px solid #e6425e;
+  width: 200px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.heading_border:after {
+  background: #e6425e;
+  position: absolute;
+  width: 26px;
+  height: 10px;
+  content: '';
+  bottom: -5px;
+  border-radius: 20px;
+  left: 87px;
+  transition: 0.3s;
+}
+.heading_border:hover:after {
+  width: 200px;
+  left: 0;
+}
+
+.cv_btn:after {
+  content: 'GO TO RESUME';
+  transition: 0.3s;
+}
+.cv_btn:hover:after {
+  content: 'DOWNLOAD C.V';
+}
+.hire_btn:after {
+  content: 'GO NOW';
+  transition: 0.3s;
+}
+.hire_btn:hover:after {
+  content: 'HIRE ME';
+}
+.App-particles__container {
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+}
+.App-particles__container canvas {
+  transition: 0.2s all ease-in-out;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}

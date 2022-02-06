@@ -6,8 +6,8 @@ import Review3 from '../assets/img/review3.jpg';
 
 const CarouselSlider = () => {
   return (
-    <div className="text-center text-white mt-10">
-      <Carousel interval={1000}>
+    <div className="text-center text-white mt-10 ">
+      <Carousel interval={2000}>
         <Carousel.Item>
           <div className="">
             <div>
@@ -20,9 +20,7 @@ const CarouselSlider = () => {
             <div className="">
               <p>
                 Rayhan is a phenomenon. Hardworking, patient and always willing
-                to give solutions. I worked with other developers but rayhan is
-                the best and by far. He is now my permanent partner. Thanks
-                Rayhan
+                to give solutions.
               </p>
               <h3>Omerarbel</h3>
             </div>

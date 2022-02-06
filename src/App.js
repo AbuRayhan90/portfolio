@@ -10,7 +10,7 @@ import Contact from './Pages/Contact';
 import Footer from './Component/Footer';
 import Navbar from './Component/Navbar';
 import GridLoader from 'react-spinners/GridLoader';
-
+import './App.css';
 function App() {
   const [loading, setLoading] = useState(false);
 

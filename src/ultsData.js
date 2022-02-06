@@ -8,7 +8,7 @@ const allData = {
     {
       id: 2,
       icon: <i className="fab fa-linkedin-in"></i>,
-      link: 'https://www.linkedin.com/in/ar-raju-273143179/',
+      link: 'https://www.linkedin.com/in/aburayhan9091/',
     },
     {
       id: 3,

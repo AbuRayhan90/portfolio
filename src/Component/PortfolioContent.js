@@ -10,7 +10,7 @@ const PortfolioContent = ({ portfolio_img, title, liveSite }) => {
           alt="portfolio"
         />
         <h1 className="text-lg my-6 font-semibold">
-          {title}{' '}
+          {title}
           <a
             href={liveSite}
             className="text-yellow-600 font-bold"

@@ -29,7 +29,7 @@ const HeroArea = () => {
             <Link to="/about" className=" cursor-pointer ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 mx-auto bg-transparent hover:bg-gray text-yellow-500 p-1 rounded-full  "
+                className="h-8 w-8 mx-auto bg-gray-100 transition duration-300 hover:bg-transparent hover:bg-gray text-yellow-600 p-1 rounded-full  "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

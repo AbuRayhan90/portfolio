@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import OwnImage from '../assets/img/arr.png';
 import AllData from '../ultsData';
 import HeadingDownLine from '../Component/HeadingDownLine';
 import { Link } from 'react-router-dom';
 import { Fade } from 'react-reveal';
 const About = () => {
-  const [btnText, setBtnText] = useState('HIRE ME');
-  const [btnText2, setBtnText2] = useState('DOWNLOAD C.V');
   return (
     <>
       <div className="container mx-auto pt-20 ">
@@ -23,7 +21,7 @@ const About = () => {
           </Fade>
           <Fade right>
             <div className="ml-6 md:ml-0 md:w-2/4 w-full">
-              <sapn className="text-3xl font-semibold border-b-2 border-yellow-500">
+              <sapn className="text-3xl font-semibold border-b-2 border-yellow-600">
                 I Am
                 <span className="font-normal border-b-2 "> Web Developer</span>
               </sapn>
@@ -50,22 +48,14 @@ const About = () => {
               <div className="md:mt-10 my-8">
                 <Link
                   to="/contact"
-                  className="bg-yellow-600 text-gray-50 cursor-pointer px-6 py-2 border-2 transition-all duration-300 border-yellow-600 hover:text-black
+                  className="hire_btn bg-yellow-600 text-gray-50 cursor-pointer px-6 py-2 border-2 transition-all duration-200 rounded-3xl border-yellow-600 hover:text-black
                 hover:bg-transparent mr-4"
-                  onMouseEnter={() => setBtnText('GO NOW')}
-                  onMouseLeave={() => setBtnText('HIRE ME')}
-                >
-                  {btnText}
-                </Link>
+                ></Link>
                 <a
                   href="../assets/cv/cv.pdf"
                   download="Abu Rayhan Cv.pdf"
-                  className="hover:text-white cursor-pointer px-6 py-2 border-2 transition-all duration-300 border-yellow-600 hover:bg-yellow-600"
-                  onMouseEnter={() => setBtnText2('GO TO RESUME')}
-                  onMouseLeave={() => setBtnText2('DOWNLOAD C.V')}
-                >
-                  {btnText2}
-                </a>
+                  className="cv_btn hover:text-white rounded-3xl cursor-pointer px-6 py-2 border-2 transition-all duration-200 border-yellow-600 hover:bg-yellow-600"
+                ></a>
               </div>
             </div>
           </Fade>
