@@ -1,3 +1,10 @@
+import Img1 from './assets/img/icon/responsive.png';
+import Img2 from './assets/img/icon/design.png';
+import Img3 from './assets/img/icon/devlop.png';
+import Img4 from './assets/img/icon/support.png';
+import Img5 from './assets/img/icon/grap.png';
+import Img6 from './assets/img/icon/aws.png';
+
 const allData = {
   socialIcon: [
     {
@@ -61,37 +68,37 @@ const allData = {
   services: [
     {
       id: 1,
-      icon: 'https://admin.zahidmzhmm.com/uploads/icon/233responsive_design-01.png',
+      icon: Img1,
       title: 'Responsive design',
       text: 'I will make all responsive designs. I know all clients love responsive design. my all work Responsive Design. As a developer we need to complete Complete Responsive design :)',
     },
     {
       id: 2,
-      icon: 'https://admin.zahidmzhmm.com/uploads/icon/420web_design-01.png',
+      icon: Img2,
       title: 'Web Design',
       text: 'I am working with web design in the last 3 years. Now I have so much experience and I have completed so much design. I have so many clients to work with web design.',
     },
     {
       id: 3,
-      icon: 'https://admin.zahidmzhmm.com/uploads/icon/816web_development-01.png',
+      icon: Img3,
       title: 'Web Development',
       text: 'I have so much experience in Web Development. Development means Full Website creation. I know and I have so much experience in web site development',
     },
     {
       id: 4,
-      icon: 'https://admin.zahidmzhmm.com/uploads/icon/184it_supporter-01.png',
+      icon: Img4,
       title: 'It Support',
       text: 'I have experience in the Sector works. I know it is one going work. I have so many clients in It Sector work. All people love my work.',
     },
     {
       id: 5,
-      icon: 'https://admin.zahidmzhmm.com/uploads/icon/897gd_design-01.png',
+      icon: Img5,
       title: 'Graphic Design',
       text: 'I have experience in Graphic Design. I am working with it for 2 years. I have some skills in Graphic design. I know Logo, Icon, Favicon and some, etc.',
     },
     {
       id: 6,
-      icon: 'https://admin.zahidmzhmm.com/uploads/icon/279aws.png',
+      icon: Img6,
       title: 'AWS',
       text: 'I have so much experience in AWS. Operating system: Debian, Ubuntu, etc. if you want I work with this AWS platform then you need to create an account in AWS',
     },

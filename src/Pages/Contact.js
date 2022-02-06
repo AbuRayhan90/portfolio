@@ -65,9 +65,9 @@ const Contact = () => {
   useEffect(() => {
     console.log(error);
     if (Object.keys(error).length === 0 && isSubmit) {
-      console.log(formValues);
+      return;
     }
-  });
+  }, [formValues]);
   return (
     <div className="bg-contact-area bg-gray-900 bg-blend-overlay bg-fixed  bg-cover bg-center py-6 md:h-auto pt-20">
       <div className="container mx-auto ">
@@ -101,7 +101,7 @@ const Contact = () => {
                 Email
               </label>
               <input
-                className=" w-full text-white py-3 px-4  leading-tight focus:outline-none bg-transparent border-1 border-gray-800"
+                className=" w-full text-white py-3 px-4  leading-tight focus:outline-none bg-transparent border-1 border-gray-800 "
                 id="grid-first-name"
                 type="email"
                 placeholder="Your Email"
