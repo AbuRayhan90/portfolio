@@ -55,7 +55,7 @@ const particles = {
     move: {
       enable: true,
       speed: 1.603412060865523,
-      direction: 'top',
+      direction: 'none',
       random: true,
       straight: true,
       out_mode: 'bounce',
