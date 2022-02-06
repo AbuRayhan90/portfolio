@@ -13,6 +13,7 @@ const PortfolioContent = ({ portfolio_img, title, liveSite }) => {
           {title}
           <a
             href={liveSite}
+            rel="noreferrer"
             className="text-yellow-600 font-bold"
             target="_blank"
             rel="site"

@@ -15,12 +15,17 @@ const Navbar = () => {
     document.title = title;
   }, [title]);
 
+  const logoClick = () => {
+    setTitle('Home');
+    setisSideMenuOpen(false);
+  };
+
   return (
     <div className="fixed w-full z-30 bg-white  py-[1rem]   overflow-hidden">
       <div className="container mx-auto  flex justify-between items-center ">
         <Link
           to="/"
-          onClick={() => setTitle('Home')}
+          onClick={() => logoClick()}
           className="text-3xl font-extrabold cursor-pointer "
         >
           <sapn className="text-green-500">A</sapn>
